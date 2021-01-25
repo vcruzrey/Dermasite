@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Portal</title>
+    <link rel="shortcut icon" href="./../../Images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../../Styles/custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- navigation -->
+        <nav class="navbar navbar-default no-margin shadow navbar-fixed-top">
+
+            <!-- navbar-top-left -->
+            <nav class="navbar navbar-default no-margin shadow">
+
+                <!-- navbar-top-left -->
+                <ul class="nav navbar-nav navbar-top">
+                    <li class="active" id="fat-menu">
+                        <a href="patient-portal.html" class="center" role="button" aria-haspopup="false" aria-expanded="false"><i
+                                class="fa fa-home"></i><span>Menu</span></a>
+                    </li>
+                    <li id="fat-menu">
+                        <a href="./Profile/patient-profile.html" class="center" role="button" aria-haspopup="false"
+                            aria-expanded="false"><i class="fa fa-user"></i><span>Perfil</span></a>
+                    </li>
+                    <li id="fat-menu">
+                        <a href="./Notes/patient-notes.html" class="center" role="button" aria-haspopup="false"
+                            aria-expanded="false"><i class="fa fa-file-prescription"></i><span>Recetas</span></a>
+                    </li>
+                </ul>
+                <!-- /navbar-top-left -->
+
+                <i class="navbar-brand"></i>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="fat-menu" class="dropdown"> <a class="dropdown-toggle center" id="drop3" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="drop3">
+                            <li><button class="btn col-md-12" id="logout_button">Salir</button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-right -->
+            </nav>
+            <!-- /navigation -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper" class="hero vertical-center">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="text-center clearfix">
+                            <p class="portal"><a href="./Profile/patient-profile.html"><button type="button" class="btn btn-default btn-circle center btn-xl shadow"><i
+                                            class="fa fa-user fa-2x"></i>Perfil</button></a></p>
+                            <p class="portal"><a href="./Notes/patient-notes.html"><button type="button" class="btn btn-default btn-circle center btn-xl shadow"><i
+                                            class="fa fa-file-prescription fa-2x"></i>Recetas</button></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./../../js/patient-portal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pacientes</title>
+    <link rel="shortcut icon" href="./../../../Images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../../../Styles/custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- navigation -->
+        <nav class="navbar navbar-default no-margin shadow">
+
+            <!-- navbar-top-left -->
+            <ul class="nav navbar-nav navbar-top">
+                <li id="fat-menu">
+                    <a href="./../doctor-portal.html" class="center" role="button" aria-haspopup="false" aria-expanded="false"><i
+                            class="fa fa-home"></i><span>Menu</span></a>
+                </li>
+                <li class="active" id="fat-menu">
+                    <a href="./patient-dashboard.html" class="center" role="button" aria-haspopup="false" aria-expanded="false"><i
+                            class="fa fa-user-injured"></i><span>Pacientes</span></a>
+                </li>
+                <li id="fat-menu">
+                    <a href="./../NotasDevolucion/note-dashboard.html" class="center" role="button" aria-haspopup="false"
+                        aria-expanded="false"><i class="fa fa-file-prescription"></i><span>Notas de Evolución</span></a>
+                </li>
+            </ul>
+            <!-- /navbar-top-left -->
+
+            <i class="navbar-brand"></i>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="fat-menu" class="dropdown"> <a class="dropdown-toggle center" id="drop3" data-toggle="dropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="drop3">
+                        <li><button class="btn col-md-12" id="logout_button">Salir</button></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.navbar-top-right -->
+        </nav>
+        <!-- /navigation -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row margin-row">
+                    <div class="col-lg-8"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="pull-left">
+                                    <a href="./patient-add.html"><button type="button" class="btn btn-primary">Registrar
+                                            Nuevo Paciente</button></a>
+                                </div>
+                                <!-- /Filter -->
+                                <div class="box col-md-5">
+                                    <form class="SearchPatient">
+                                        <fieldset>
+                                            <div class="container-2">
+                                                <span class="icon"><i class="fa fa-search"></i></span>
+                                                <input type="search" id="search" placeholder="Buscar" value="" />
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <!-- Select -->
+                                <div class="pull-right">
+                                    <div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                            <option>25</option>
+                                            <option>50</option>
+                                            <option>200</option>
+                                            <option>500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <p class="text-align">Elementos/página:&shy;</p>
+                                </div>
+                                <!-- /Select -->
+                                <!-- Table -->
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No. Expediente</th>
+                                            <th>Nombre del Paciente</th>
+                                            <th>Sexo</th>
+                                            <th>Fecha de Nacimiento</th>
+                                            <th colspan="2">Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="all-patients">
+                                    </tbody>
+                                </table>
+                                <div class="alert alert-warning" role="alert" id="warning_message">
+                                    <i class="fas fa-exclamation-triangle"></i> No se han encontrado resultados.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./../../../js/patient-dashboard.js"></script>
+
+</body>
+
+</html>

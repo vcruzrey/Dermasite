@@ -1,0 +1,417 @@
+/* Standard Styles */
+
+body {
+	font-family: 'Nunito', sans-serif;
+	margin: 0;
+}
+
+p {
+	font-weight: 400;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+}
+
+.btn{
+	background-color: #ec971f !important;
+    border-color: #d58512 !important;
+}
+
+@media screen and (min-width: 700px) {
+	h2 {
+		font-size: 2.5em;
+	}
+}
+
+
+/* Header and Navigation */
+
+header {
+	text-align: center;
+}
+
+.header-nav .logo {
+	max-width: 200px;
+	padding: 1em;
+}
+
+.main-nav ul, .navigation_buttons ul {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 700px) {
+	
+	.main-nav ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.main-nav ul {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	
+	header {
+		padding-top: 1em;
+	}
+	
+	.header-nav {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		align-items: center;
+		padding-bottom: 1em;
+	}
+}
+
+.main-nav a {
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: .85em;
+}
+
+.contact-info ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.navigation_buttons {
+	width: 50%;
+	margin: 0 auto;
+	padding: .5em;
+}
+.navigation_buttons ul {
+	list-style: none;
+	padding:0;
+	max-width: 100px;
+	margin: 0 auto;
+}
+.navigation_buttons li{
+	margin: 10px;
+}
+/* Top Contact Info Block */
+
+.contact-info {
+	font-size: .8em;
+	font-weight: 500;
+	background-color: #DE6260;
+	color: white;
+	padding: 1em;
+}
+
+@media screen and (min-width: 700px) {
+	.contact-info ul {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
+
+/* Hero Image */
+
+#logo_image{
+	margin-left: 300px;
+	height: 140px;
+}
+
+#logo_text{
+	margin-left: 100px;
+	margin-top: 16px;
+	font-family: inherit;
+    color: black;
+    font-weight: lighter;
+}
+
+.hero-image {
+	background-image: url("./../Images/dermatology-bg.jpg");
+	align-items: flex-start;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	color: white;
+	min-height: 300px;
+	padding: .5em;
+	position: relative;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+	.hero-image {
+		min-height: 500px;
+	}
+}
+
+.hero-image h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1em;
+	margin-top: 2em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: 'Nunito', sans-serif;
+	z-index: 2;
+}
+
+.hero-image h1 {
+	margin:0;
+	padding: 0;
+	z-index: 2;
+}
+
+.intro {
+	text-align: center;
+	padding: 1em;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+.intro h2{
+	color:#DE6260;
+}
+
+@media screen and (min-width: 850px) {
+	.intro {
+		margin-top: 2em;
+		margin-bottom: 3.5em;
+	}
+}
+
+/* doctor */
+
+.dr_information {
+	background-color: #DE6260;
+}
+
+.dr_information__text {
+	text-align: center;
+	margin-right:250px; 
+	padding: 1em;
+}
+
+.dr_information__text h2{
+	color: #fbf070;
+}
+
+.dr_information h3 {
+	color: white;
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5em;
+}
+
+.dr_information ul {
+	list-style: none;
+	padding-left: 0;
+	font-size: .8em;
+}
+
+.dr_information p {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.dr_information {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+	}
+	
+	.dr_information__text-container {
+		align-items: center;
+		display: flex;
+		padding: 2em;
+	}
+}
+
+#doctor_image{
+	height: 400px;
+}
+
+/* services */
+
+.services {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.services p{
+	font-size: 0.9rem;
+}
+
+.services ul {
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+	
+	.services {
+		margin-bottom: 2em;
+	}
+	
+	.services ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-content: space-around;
+		text-align: center;
+	}
+	
+	.services img {
+		height: 200px;
+	}
+}
+
+.services h2 {
+	color: rgb(222,80,33);
+	margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.services ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.services h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: .9em;
+}
+
+.services h3 span {
+	display: block;
+	font-size: 200%;
+}
+
+
+/* Footer */
+
+footer {
+	background-color: rgb(232,232,232);
+}
+
+@media screen and (min-width: 700px) {
+	.footer-contact {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-top: 0;
+	}
+	
+	footer h4 {
+		margin-top: .5em; 
+	}
+
+}
+
+.footer__main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+@media screen and (min-width: 900px) {
+	.footer__main {
+		padding: 2em;
+	}
+}
+
+.footer__supplemental {
+	text-align: center;
+	padding-top: 2em;
+	margin-bottom: 2em;
+	font-size: .8em;
+	background-color: white;
+}
+
+footer p {
+	color: rgb(96, 94, 94);
+	font-size: .85em;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+footer h2 {
+	font-size: 1.2em;
+}
+
+footer h2 span {
+	font-size: 200%;
+	display: block;
+}
+
+footer h3 {
+	color: rgb(222,80,33);
+	font-size: .9em;
+	margin-top: 1.5em;
+	padding-bottom: .5em;
+	margin-bottom: 0;
+}
+
+.footer-contact {
+	list-style: none;
+	padding-left: 0;
+	color: rgb(96, 94, 94);
+}
+
+.footer h4 {
+	margin-bottom: 0;
+	padding-bottom: .5em;
+}
+
+#footer_location_title{
+	white-space: nowrap;
+}
+#footer_second_container{
+	display: flex;
+	align-items: center;
+}
+
+#googleMap{
+	margin-left: 200px;
+	width:500px;
+	height:300px;
+}
+
+.div-container{
+	margin: 30px;
+}
+
+
+/* Facebook icon */
+
+.fa-facebook-f {
+	padding: 12px;
+	font-size: 24px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 1px 1px;
+	border-radius: 50%;
+  }
+  
+  .fa-facebook-f:hover {
+	  opacity: 0.7;
+  }
+  
+  .fa-facebook-f {
+	background: #3B5998;
+	color: white;
+  }

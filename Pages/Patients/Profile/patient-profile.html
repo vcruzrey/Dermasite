@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Datos Personales</title>
+    <link rel="shortcut icon" href="./../../../Images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../../../Styles/custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- navigation -->
+        <nav class="navbar navbar-default no-margin shadow">
+
+            <!-- navbar-top-left -->
+            <ul class="nav navbar-nav navbar-top">
+                <li id="fat-menu">
+                    <a href="./../patient-portal.html" class="center" role="button" aria-haspopup="false" aria-expanded="false"><i
+                            class="fa fa-home"></i><span>Menu</span></a>
+                </li>
+                <li class="active" id="fat-menu">
+                    <a href="./patient-profile.html" class="center" role="button" aria-haspopup="false" aria-expanded="false"><i
+                            class="fa fa-user"></i><span>Perfil</span></a>
+                </li>
+                <li id="fat-menu">
+                    <a href="./../Notes/patient-notes.html" class="center" role="button" aria-haspopup="false"
+                        aria-expanded="false"><i class="fa fa-file-prescription"></i><span>Recetas</span></a>
+                </li>
+            </ul>
+            <!-- /navbar-top-left -->
+
+            <i class="navbar-brand"></i>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="fat-menu" class="dropdown"> <a class="dropdown-toggle center" id="drop3" data-toggle="dropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="drop3">
+                        <li><button class="btn col-md-12" id="logout_button">Salir</button></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.navbar-top-right -->
+        </nav>
+        <!-- /navigation -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Modificar Datos Personales</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <!-- Form -->
+                                <div class="container">
+
+                                    <form class="well form-horizontal">
+                                        <fieldset>
+
+                                            <!-- HEADER DIV -->
+                                            <div class="form-group">
+                                                <h4 class="col-md-7 control-label">Datos Personales</h4>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Nombre(s)</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input id="first_name" placeholder="Nombre(s)" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                    <p id="error_first_name" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Apellido Paterno</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input id="last_name_father" placeholder="Apellido Paterno"
+                                                            class="form-control" type="text">
+                                                    </div>
+                                                    <p id="error_last_name_father" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Apellido Materno</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input id="last_name_mother" placeholder="Apellido Materno"
+                                                            class="form-control" type="text">
+                                                    </div>
+                                                    <p id="error_last_name_mother" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Contraseña</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                                        <input id="password" placeholder="ej. derma123" class="form-control"
+                                                            type="password">
+                                                    </div>
+                                                    <p id="error_password" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Verificar Contraseña</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                                        <input id="verify_password" placeholder="ej. derma123" class="form-control"
+                                                            type="password">
+                                                    </div>
+                                                    <p id="error_verify_password" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">E-Mail</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                        <input id="email" placeholder="E-Mail" class="form-control"
+                                                            type="email">
+                                                    </div>
+                                                    <p id="error_email" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- radio checks -->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Sexo</label>
+                                                <div class="col-md-4">
+                                                    <div class="radio">
+                                                        <p id="error_gender" class="error_p"></p>
+                                                        <label>
+                                                            <input type="radio" name="gender" value="Masculino" />
+                                                            Masculino
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="gender" value="Femenino" />
+                                                            Femenino
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Fecha de Nacimiento</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+                                                        <input type="date" id="birth_date" class="form-control"
+                                                            required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                                                    </div>
+                                                    <p id="error_birth_date" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- radio checks -->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Estado Civil</label>
+                                                <div class="col-md-4">
+                                                    <div class="radio">
+                                                        <p id="error_civil_status" class="error_p"></p>
+                                                        <label>
+                                                            <input type="radio" name="civil_status" value="Soltero" />
+                                                            Soltero/a
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="civil_status" value="Casado" />
+                                                            Casado/a
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="civil_status" value="UnionLibre" />
+                                                            Unión Libre
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="civil_status" value="Divorciado" />
+                                                            Divorciado/a
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="civil_status" value="Viudo" />
+                                                            Viudo/a
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- radio checks -->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Ocupación</label>
+                                                <div class="col-md-4">
+                                                    <div class="radio">
+                                                        <p id="error_occupation" class="error_p"></p>
+                                                        <label>
+                                                            <input type="radio" name="occupation" value="Estudiante" />
+                                                            Estudiante
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="occupation" value="Empleado" />
+                                                            Empleado/a
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="occupation" value="Comerciante" />
+                                                            Comerciante
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="occupation" value="Jubilado" />
+                                                            Jubilado/a
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="occupation" value="AmaCasa" />
+                                                            Ama de Casa
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Teléfono</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                                        <input id="phone" placeholder="(81)8135-1212" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                    <p id="error_phone" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Calle</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                        <input id="street" placeholder="Calle" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                    <p id="error_street" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Colonia</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                        <input id="colony" placeholder="Colonia" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                    <p id="error_colony" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Codigo Postal</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                        <input id="zip_code" placeholder="Codigo Postal" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                    <p id="error_zip_code" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Ciudad</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                        <input id="city" placeholder="Ciudad" class="form-control" type="text">
+                                                    </div>
+                                                    <p id="error_city" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Select Basic -->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Estado</label>
+                                                <div class="col-md-4 selectContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                        <select id="patient_state" class="form-control selectpicker">
+                                                            <option value="0">Seleccione un estado</option>
+                                                            <option value="Aguascalientes">Aguascalientes</option>
+                                                            <option value="Baja California">Baja California</option>
+                                                            <option value="Baja California Sur">Baja California Sur</option>
+                                                            <option value="Campeche">Campeche</option>
+                                                            <option value="Chihuahua">Chihuahua</option>
+                                                            <option value="Chiapas">Chiapas</option>
+                                                            <option value="Coahuila">Coahuila</option>
+                                                            <option value="Colima">Colima</option>
+                                                            <option value="Durango">Durango</option>
+                                                            <option value="Guanajuato">Guanajuato</option>
+                                                            <option value="Guerrero">Guerrero</option>
+                                                            <option value="Hidalgo">Hidalgo</option>
+                                                            <option value="Jalisco">Jalisco</option>
+                                                            <option value="Mexico">México</option>
+                                                            <option value="Michoacan">Michoacán</option>
+                                                            <option value="Morelos">Morelos</option>
+                                                            <option value="Nayarit">Nayarit</option>
+                                                            <option value="Nuevo Leon">Nuevo León</option>
+                                                            <option value="Oaxaca">Oaxaca</option>
+                                                            <option value="Puebla">Puebla</option>
+                                                            <option value="Queretaro">Querétaro</option>
+                                                            <option value="Quintana Roo">Quintana Roo</option>
+                                                            <option value="San Luis Potosi">San Luis Potosí</option>
+                                                            <option value="Sinaloa">Sinaloa</option>
+                                                            <option value="Sonora">Sonora</option>
+                                                            <option value="Tabasco">Tabasco</option>
+                                                            <option value="Tamaulipas">Tamaulipas</option>
+                                                            <option value="Tlaxcala">Tlaxcala</option>
+                                                            <option value="Veracruz">Veracruz</option>
+                                                            <option value="Yucatan">Yucatán</option>
+                                                            <option value="Zacatecas">Zacatecas</option>
+                                                        </select>
+                                                    </div>
+                                                    <p id="error_patient_state" class="error_p"></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">(Opcional) RFC</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fas fa-id-card"></i></span>
+                                                        <input id="rfc" placeholder="RFCT712312R01" class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Text area -->
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Motivo de la Consulta</label>
+                                                <div class="col-md-4 inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <textarea class="form-control" id="consult_reason" placeholder="Descripción Breve"></textarea>
+                                                    </div>
+                                                    <p id="error_consult_reason" class="error_p"></p>
+                                                </div>
+                                            </div>
+                                            <!-- Success message -->
+                                            <div class="alert alert-success" role="alert" id="success_message">Exito
+                                                <i class="glyphicon glyphicon-thumbs-up"></i>Tu perfil se modifico
+                                                exitosamente.</div>
+
+                                            <!-- Error message -->
+                                            <div class="alert alert-danger" role="alert" id="error_message"></div>
+                                        </fieldset>
+                                    </form>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn btn-danger" id="patient_form_cancel">Cancelar</button>
+                                        <button type="submit" class="btn btn-success" id="patient_form_save">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.container -->
+                            <!-- Form -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./../../../js/patient-profile.js"></script>
+</body>
+
+</html>
